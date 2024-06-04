@@ -1,7 +1,8 @@
 # Relatório
 ## Primeira Semana - 04/06
 ### Estatística descritiva com distribuição dos dados, padrões e outliers
-Parte do describe e gerar boxplots, porém ainda não arrumamos tudo
+Parte do describe e gerar boxplots, porém ainda não arrumamos 
+![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/032ade07-4142-4a20-892e-6ca58dba8601)
 
 ### Divisão dos conjuntos de treino, teste e validação
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/145d32be-6a1b-4963-981f-6440c1f70418)
