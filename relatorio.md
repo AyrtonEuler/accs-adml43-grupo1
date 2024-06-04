@@ -11,6 +11,7 @@ Parte do describe e gerar boxplots, porém ainda não arrumamos tudo
 
 ### Deploy em um container e conexão com dados
 Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jogar o ipynb numa imagem do Docker**
+
 ---
 
 ## Segunda Semana - 11/06
