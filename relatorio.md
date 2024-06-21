@@ -5,7 +5,8 @@ Parte do describe e gerar boxplots, porém ainda não arrumamos
 
 ![](./histogramas.svg)
 
-![](./boxplots.svg)
+![](./correlation.svg)
+
 
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/032ade07-4142-4a20-892e-6ca58dba8601)
 
