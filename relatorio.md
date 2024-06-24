@@ -37,7 +37,16 @@ O resultado ficou da seguinte forma:
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/171699350/5ce4877c-8d3b-4734-8715-ec40b978bae0)
 
 #### Validação Árvore de Decisão
-
+```python
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier(
+    criterion = 'entropy',  # Critério de Divisão: Entropia
+    max_depth = None,       # Profundidade Máxima: Sem limite inicial, ajustável com validação cruzada.
+    min_samples_split = 2,  # Número Mínimo de Amostras para Divisão de um Nó: 2
+    min_samples_leaf = 1,   # Número Mínimo de Amostras em um Nó Folha: 1
+)
+clf = clf.fit(X_train, y_train)
+```
 Com os hiperparâmetros pré-definidos nesta etapa inicial da árvore de decisão e após o conjunto de dados pré-processado e dividido em conjuntos de treino e teste, criamos uma baseline inicial para comparação futura com os hiperparâmetros otimizados:
 
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/107217921/dbbab7fe-89b9-4205-86e9-cf501f8e756e)
