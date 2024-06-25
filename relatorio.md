@@ -194,13 +194,36 @@ Melhor F1-score :0.8751328155228276
 Parâmetros tunados:
 ```python
 hyperparameters = {
-    'criterion' : ['gini', 'entropy', 'log_loss'],  # Critério de Divisão: Entropia
-    'n_estimators': [10,100,200,250,400,800],     # Número Mínimo de Amostras em um Nó Folha: 1
+    'criterion' : ['gini', 'entropy', 'log_loss'],  # Critério de Divisão
+    'n_estimators': [10,100,200,250,400],     # Número Mínimo de Amostras em um Nó Folha
 }
 ```
 
+![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/4ef0265b-db4b-43e0-ade6-3b7232eaa3ec)
+
+Melhores hiperparâmetros: 
+```python
+{'criterion': 'log_loss', 'n_estimators': 400}
+```
+
+|              | precision | recall | f1-score | support      |
+|--------------|-----------|--------|----------|--------------|
+| 0            | 0.92      | 0.94   | 0.94     | 131690       |
+| 1            | 0.89      | 0.88   | 0.88     | 72980        |
+| accuracy     |           |        | 0.92     | 204670       |
+| macro avg    | 0.91      | 0.91   | 0.91     | 204670       |
+| weighted avg | 0.92      | 0.92   | 0.92     | 204670       |
+
+Melhor F1-score : 0.8772515927873686
+
 ### Monitoramento de desempenho do modelo
 
+
+|              | precision | recall | f1-score |
+|--------------|-----------|--------|----------|
+| Random Forest            | 0.92      | 0.94   | 0.94     |
+| Logistic Regression            | 0.92      | 0.93   | 0.93     |
+| Decision Tree            | 0.93      | 0.94   | 0.93     | 131690       |
 
 ---
 
