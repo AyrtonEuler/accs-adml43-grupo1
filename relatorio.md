@@ -118,6 +118,7 @@ hyperparameters = {
 ```
 
 #### Árvore de Decisão
+![](./ADML43_DecisionTreeClassifier_.svg)
 
 Parâmetros tunados:
 ```python
