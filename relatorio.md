@@ -1,19 +1,34 @@
 # Relatório
 ## Primeira Semana - 04/06
 ### Estatística descritiva com distribuição dos dados, padrões e outliers
-Parte do describe e gerar boxplots, porém ainda não arrumamos 
+Gráficos de histograma de cada campo da base de dados
 
 ![](./histogramas.svg)
 
+Matriz de correlação dos campos da base de dados
 ![](./correlation.svg)
 
-
+Decidimos usar `CLASSI_FIN` como output para o nosso modelo
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/032ade07-4142-4a20-892e-6ca58dba8601)
+Criamos um campo `DOENTE`. Se o campo `CLASSI_FIN` for algum destes números, seguindo o Dicionário de Dados do SINAN:
+```
+10-Dengue
+11-Dengue comsinais de alarme
+12-Dengue grave
+13-Chikungunya
+```
+O campo `DOENTE` será 1. Caso contrário, o campo `DOENTE` será 0.
+
+Usamos a técnica One Hot Encoding para converter dados categóricos em binários, com um campo para cada categoria. 
+Por exemplo, ao invez de um campo `CS_SEXO` que possa ser [F, M ou I], criamos três campos `CS_SEXO_F`,`CS_SEXO_M` e `CS_SEXO_I` todos de acordo com o campo `CS_SEXO`
+
+
 
 ### Divisão dos conjuntos de treino, teste e validação
-![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/145d32be-6a1b-4963-981f-6440c1f70418)
+Utilizamos a função `train_test_split` da biblioteca Scikit-Learn para dividir o dataset em dois, 66.7% para treino, e 33.3% para teste, mantendo as proporções de estratificação do campo `DOENTE` afim de manter a mesma porcentagem de doentes em ambos o treino e o teste, já que o dataset é desbalanceado.
 
-#### Divisão dos conjuntos de treino
+
+### Validação dos algoritmos com métricas de P, R e F1
 
 Os algoritmos foram divididos entre os programadores juniores e seniôr. A atribuição ficou da seguinte forma:
 
@@ -21,9 +36,7 @@ Os algoritmos foram divididos entre os programadores juniores e seniôr. A atrib
 - Felipe: Rede Neural;
 - Pedro: Regressão Logistica;
 - Matheus: KNN e Floresta Aleatória.
-
-
-### Validação dos algoritmos com métricas de P, R e F1
+  
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/1609c641-658f-4e79-ab13-0167fd04b425)
 
 #### Validação Regressão Logistica
