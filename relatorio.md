@@ -20,8 +20,9 @@ Criamos um campo `DOENTE`. Se o campo `CLASSI_FIN` for algum destes números, se
 O campo `DOENTE` será 1. Caso contrário, o campo `DOENTE` será 0.
 
 Usamos a técnica One Hot Encoding para converter dados categóricos em binários, com um campo para cada categoria. 
-Por exemplo, ao invez de um campo `CS_SEXO` que possa ser [F, M ou I], criamos três campos `CS_SEXO_F`,`CS_SEXO_M` e `CS_SEXO_I` todos de acordo com o campo `CS_SEXO`
+Por exemplo, ao invez de um campo `CS_SEXO` que possa ser `[F, M ou I]`, criamos três campos `CS_SEXO_F`,`CS_SEXO_M` e `CS_SEXO_I` todos sendo `[1 ou 0]` de acordo com o campo `CS_SEXO`
 
+Removemos todas as linhas que tinham ou `CS_SEXO` ou `CLASSI_FIN` ausente. 
 
 
 ### Divisão dos conjuntos de treino, teste e validação
@@ -101,15 +102,93 @@ Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jo
 ### Dashboard de visualização dos dados
 
 ### Avaliação dos hiperparâmetros e proposta de novos hiperparâmetros mais adequados aos dados
+Para tunar os hiperparâmetros dos modelos, usamos a classe `HalvingGridSearchCV` da biblioteca Scikit-Learn, que basicamente faz um Grid Search porém com poucos dados no inicio, descarta os modelos mais fracos, depois treina novamente os modelos restantes com o dobro de dados, até chegar no dataset total. Utilizamos Stratified Cross Validation, com K = 3, por ser bem mais rápido e não apresentar muitas diferenças se comparado com K = 5 ou K = 10. 
+Decidimos optimizar a métrica f1-score, já que o dataset é desbalanceado. 
+
 #### K-Nearest Neighbors (KNN)
+
+Parâmetros tunados:
+```python
+hyperparameters = {
+    "n_neighbors" : [5,7,10,13,15,20],
+    "weights": ['uniform', 'distance']
+}
+```
 
 #### Árvore de Decisão
 
+Parâmetros tunados:
+```python
+hyperparameters = {
+    'criterion' : ['gini', 'entropy', 'log_loss'],  # Critério de Divisão: Entropia
+    'min_samples_split': [2,4,8,16],                # Número Mínimo de Amostras para Divisão de um Nó: 2
+    'min_samples_leaf': [1,2,4,8,16,32,64,128],     # Número Mínimo de Amostras em um Nó Folha: 1
+}
+```
+
+Melhores hiperparâmetros: 
+```python
+{'criterion': 'gini', 'min_samples_leaf': 32, 'min_samples_split': 16}
+```
+Melhor F1-score : 0.8865631871945879
+
+|              | precision | recall | f1-score | support      |
+|--------------|-----------|--------|----------|--------------|
+| 0            | 0.93      | 0.94   | 0.93     | 131690       |
+| 1            | 0.89      | 0.87   | 0.88     | 72980        |
+| accuracy     |           |        | 0.91     | 204670       |
+| macro avg    | 0.91      | 0.91   | 0.91     | 204670       |
+| weighted avg | 0.92      | 0.92   | 0.92     | 204670       |
+
 #### Rede Neural (Multilayer Perceptron - MLP)
+
+Parâmetros tunados:
+```python
+hyperparameters = {
+    'hidden_layer_sizes' : [(100, 100), (100,100,100), (100,100,100,100), (200,200), (300,300), (100,200,300), (400,400,400)] 
+    'criterion' : ['gini', 'entropy', 'log_loss'],  # Critério de Divisão: Entropia
+    'n_estimators': [10,100,200,250,400,800],     # Número Mínimo de Amostras em um Nó Folha: 1
+}
+```
 
 #### Logistic Regression (Regressão Logística)
 
+Parâmetros tunados:
+```python
+
+hyperparameters = {
+    "max_iter": [1000],
+    "solver": ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
+    #"class_weight": ['balanced'],
+    #"C":np.logspace(-3,3,7),
+    "penalty":["l1","l2"]
+}
+
+```
+
+![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/a9bdb0d6-ce26-4638-86ce-313d7e43061a)
+
+Melhores hiperparâmetros: 
+```python
+{'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga'}
+```
+Melhor F1-score :0.8751328155228276
+
+|              | precision | recall | f1-score | support      |
+|--------------|-----------|--------|----------|--------------|
+| 0            | 0.92      | 0.93   | 0.93     | 131690       |
+| 1            | 0.88      | 0.86   | 0.87     | 72980        |
+| accuracy     |           |        | 0.91     | 204670       |
+| macro avg    | 0.90      | 0.90   | 0.90     | 204670       |
+| weighted avg | 0.91      | 0.91   | 0.91     | 204670       |
+
+
 #### Random Forest (Floresta Aleatória)
+
+Parâmetros tunados:
+```python
+
+```
 
 ### Monitoramento de desempenho do modelo
 
