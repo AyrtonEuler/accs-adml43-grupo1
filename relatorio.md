@@ -26,7 +26,7 @@ Removemos todas as linhas que tinham ou `CS_SEXO` ou `CLASSI_FIN` ausente.
 
 
 ### Divisão dos conjuntos de treino, teste e validação
-Utilizamos a função `train_test_split` da biblioteca Scikit-Learn para dividir o dataset em dois, 66.7% para treino, e 33.3% para teste, mantendo as proporções de estratificação do campo `DOENTE` afim de manter a mesma porcentagem de doentes em ambos o treino e o teste, já que o dataset é desbalanceado.
+Utilizamos a função `train_test_split` da biblioteca Scikit-Learn para embaralhar o dataset e depois dividir-lo em dois, sendo 66.7% para treino, e 33.3% para teste, mantendo as proporções de estratificação do campo `DOENTE` afim de manter a mesma porcentagem de doentes em ambos o treino e o teste, já que o dataset é desbalanceado.
 
 
 ### Validação dos algoritmos com métricas de P, R e F1
