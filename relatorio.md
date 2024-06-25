@@ -71,3 +71,35 @@ Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jo
 ### Monitoramento da performance do modelo
 
 ---
+
+## Terceira Semana - 18/06
+### Estatística descritiva com distribuição dos dados, padrões e outliers para o pré-processamento definidos
+
+### Divisão dos conjuntos de treino, teste e validação
+
+### Validação dos algoritmos com métricas de P, R e F1
+
+### Deploy em um container e conexão com dados; 
+
+
+---
+
+## Quarta Semana - 25/06
+### Dashboard de visualização dos dados
+
+### Avaliação dos hiperparâmetros e proposta de novos hiperparâmetros mais adequados aos dados
+#### K-Nearest Neighbors (KNN)
+
+#### Árvore de Decisão
+
+#### Rede Neural (Multilayer Perceptron - MLP)
+
+#### Logistic Regression (Regressão Logística)
+
+#### Random Forest (Floresta Aleatória)
+
+### Monitoramento de desempenho do modelo
+
+
+---
+
