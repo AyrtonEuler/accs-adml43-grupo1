@@ -86,7 +86,7 @@ Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jo
 
 ---
 
-## Terceira Semana - 18/06
+<!-- ## Terceira Semana - 18/06
 ### Estatística descritiva com distribuição dos dados, padrões e outliers para o pré-processamento definidos
 Mesma coisa que o da primeira semana. 
 
@@ -98,7 +98,7 @@ Mesma coisa que o da primeira semana.
 ### Deploy em um container e conexão com dados; 
 
 
----
+--- -->
 
 ## Quarta Semana - 25/06
 ### Dashboard de visualização dos dados
