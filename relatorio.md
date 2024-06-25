@@ -145,7 +145,7 @@ Melhor F1-score : 0.8865631871945879
 Parâmetros tunados:
 ```python
 hyperparameters = {
-    'hidden_layer_sizes' : [(100, 100), (100,100,100), (100,100,100,100), (200,200), (300,300), (100,200,300), (400,400,400)] 
+    'hidden_layer_sizes' : [(100, 100), (100,100,100), (100,100,100,100), (200,200), (300,300), (100,200,300), (400,400,400)],
     'criterion' : ['gini', 'entropy', 'log_loss'],  # Critério de Divisão: Entropia
     'n_estimators': [10,100,200,250,400,800],     # Número Mínimo de Amostras em um Nó Folha: 1
 }
@@ -159,8 +159,6 @@ Parâmetros tunados:
 hyperparameters = {
     "max_iter": [1000],
     "solver": ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
-    #"class_weight": ['balanced'],
-    #"C":np.logspace(-3,3,7),
     "penalty":["l1","l2"]
 }
 
@@ -187,7 +185,10 @@ Melhor F1-score :0.8751328155228276
 
 Parâmetros tunados:
 ```python
-
+hyperparameters = {
+    'criterion' : ['gini', 'entropy', 'log_loss'],  # Critério de Divisão: Entropia
+    'n_estimators': [10,100,200,250,400,800],     # Número Mínimo de Amostras em um Nó Folha: 1
+}
 ```
 
 ### Monitoramento de desempenho do modelo
