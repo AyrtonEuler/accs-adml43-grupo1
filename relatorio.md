@@ -116,6 +116,7 @@ hyperparameters = {
     "weights": ['uniform', 'distance']
 }
 ```
+---
 
 #### Árvore de Decisão
 ![](./ADML43_DecisionTreeClassifier_.svg)
@@ -143,6 +144,8 @@ Melhor F1-score : 0.8865631871945879
 | macro avg    | 0.91      | 0.91   | 0.91     | 204670       |
 | weighted avg | 0.92      | 0.92   | 0.92     | 204670       |
 
+---
+
 #### Rede Neural (Multilayer Perceptron - MLP)
 
 Parâmetros tunados:
@@ -153,6 +156,7 @@ hyperparameters = {
     'n_estimators': [10,100,200,250,400,800],     # Número Mínimo de Amostras em um Nó Folha: 1
 }
 ```
+---
 
 #### Logistic Regression (Regressão Logística)
 
@@ -183,6 +187,7 @@ Melhor F1-score :0.8751328155228276
 | macro avg    | 0.90      | 0.90   | 0.90     | 204670       |
 | weighted avg | 0.91      | 0.91   | 0.91     | 204670       |
 
+---
 
 #### Random Forest (Floresta Aleatória)
 
