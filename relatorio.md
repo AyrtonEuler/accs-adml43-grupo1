@@ -88,8 +88,10 @@ Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jo
 
 ## Terceira Semana - 18/06
 ### Estatística descritiva com distribuição dos dados, padrões e outliers para o pré-processamento definidos
+Mesma coisa que o da primeira semana. 
 
 ### Divisão dos conjuntos de treino, teste e validação
+Mesma coisa que o da primeira semana.
 
 ### Validação dos algoritmos com métricas de P, R e F1
 
