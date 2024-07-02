@@ -79,25 +79,25 @@ Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jo
 
 ## Segunda Semana - 11/06
 
-# Relatório de Construção do Dashboard de Análise de Casos de Dengue
+## Relatório de Construção do Dashboard de Análise de Casos de Dengue
 
-## Introdução
+### Introdução
 
 Este relatório contempla uma das entregas realizadas para a matéria **ADML - 43: ACCS: Oficina de Projetos em Inteligência Artificial**. O objetivo deste relatório é detalhar o processo de criação de um dashboard no Power BI para a visualização dos dados relacionados aos casos de dengue, facilitando a análise e compreensão dos dados.
 
-## Objetivo da Etapa
+### Objetivo da Etapa
 
 O objetivo principal desta etapa foi criar um dashboard interativo que permite a visualização e análise dos dados de casos de dengue, fornecendo insights valiosos para monitoramento e tomada de decisão.
 
-## Etapas do Trabalho
+### Etapas do Trabalho
 
-### Dashboard de Visualização dos Dados
+#### Dashboard de Visualização dos Dados
 
 Nesta seção, discutiremos as decisões e ideias que nortearam a construção do dashboard requerido para esta entrega. O dashboard foi construído no Power BI e pode ser visualizado dinamicamente na plataforma Power BI Online. Para aqueles que preferirem, o arquivo do dashboard pode ser baixado para acesso pelo aplicativo do Power BI em seu computador pessoal.
 
 [Visualizar Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiMGQxZWM4ZDQtN2E3Ny00YTQyLThmOTEtZDIwZTcxMDc4MmRjIiwidCI6ImRmNzFmNmJiLWUzY2MtNGY1Yi1iNTMyLTc5ZGUyNjFiNTFhMiJ9)
 
-### Seleção e Manipulação dos Dados para Visualização
+#### Seleção e Manipulação dos Dados para Visualização
 
 Para a construção do dashboard, utilizamos dados de casos de dengue, que foram pré-processados para incluir apenas colunas relevantes. As principais alterações realizadas nos dados foram:
 
@@ -105,7 +105,7 @@ Para a construção do dashboard, utilizamos dados de casos de dengue, que foram
 - **Classificação de Sexo:** Alteração dos valores de sexo para "Homem" e "Mulher", removendo valores nulos e indiferenciados.
 - **Filtro Geográfico:** Foco nas notificações da região da Bahia.
 
-### Escolha das Visualizações
+#### Escolha das Visualizações
 
 As visualizações foram escolhidas para fornecer uma visão abrangente e detalhada dos casos de dengue, permitindo análise sob diferentes perspectivas. As visualizações incluem:
 
@@ -116,21 +116,21 @@ As visualizações foram escolhidas para fornecer uma visão abrangente e detalh
 5. **Distribuição por Faixa Etária e Sexo:** Gráficos de barras e pizza mostrando a distribuição dos casos por faixa etária e sexo.
 6. **Distribuição por Etnia:** Gráfico de barras mostrando a distribuição dos casos por etnia.
 
-## Imagens do Dashboard
+### Imagens do Dashboard
 
-### Página 1: Dados Gerais
+#### Página 1: Dados Gerais
 
-![Página 1]()
+![Página 1](./Casos Dengue-1.png)
 
-### Página 2: Gráficos
+#### Página 2: Gráficos
 
-![Página 2]()
+![Página 2](./Casos Dengue-2.png)
 
-### Página 3: Mapas
+#### Página 3: Mapas
 
-![Página 3]()
+![Página 3](./Casos Dengue-3.png)
 
-## Insights Extraídos a Partir do Dashboard
+### Insights Extraídos a Partir do Dashboard
 
 A partir das visualizações elaboradas no dashboard, alguns insights importantes foram obtidos:
 
@@ -139,7 +139,7 @@ A partir das visualizações elaboradas no dashboard, alguns insights importante
 3. **Perfil dos Afetados:** A maioria dos casos confirmados é do sexo feminino, com maior incidência em adultos. A etnia mais afetada é a parda.
 4. **Casos Graves e Óbitos:** A quantidade de casos graves e óbitos é relativamente baixa em comparação ao total de notificações, mas merece atenção especial.
 
-## Conclusão
+### Conclusão
 
 O dashboard criado fornece uma ferramenta poderosa para a análise dos casos de dengue, permitindo uma compreensão detalhada e facilitando a tomada de decisões informadas. As visualizações interativas permitem explorar os dados de diferentes ângulos, ajudando a identificar padrões e tendências importantes.
 
