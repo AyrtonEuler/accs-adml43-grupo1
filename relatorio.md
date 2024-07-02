@@ -120,15 +120,15 @@ As visualizações foram escolhidas para fornecer uma visão abrangente e detalh
 
 #### Página 1: Dados Gerais
 
-![Página 1](./Casos Dengue-1.png)
+![Página 1](./Casos%20Dengue-1.png)
 
 #### Página 2: Gráficos
 
-![Página 2](./Casos Dengue-2.png)
+![Página 2](./Casos%20Dengue-2.png)
 
 #### Página 3: Mapas
 
-![Página 3](./Casos Dengue-3.png)
+![Página 3](./Casos%20Dengue-3.png)
 
 ### Insights Extraídos a Partir do Dashboard
 
