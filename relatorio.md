@@ -97,6 +97,8 @@ Nesta seção, discutiremos as decisões e ideias que nortearam a construção d
 
 [Visualizar Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiMGQxZWM4ZDQtN2E3Ny00YTQyLThmOTEtZDIwZTcxMDc4MmRjIiwidCI6ImRmNzFmNmJiLWUzY2MtNGY1Yi1iNTMyLTc5ZGUyNjFiNTFhMiJ9)
 
+[Baixar Arquivo PBIX](./Casos%20Dengue.pbix)
+
 #### Seleção e Manipulação dos Dados para Visualização
 
 Para a construção do dashboard, utilizamos dados de casos de dengue, que foram pré-processados para incluir apenas colunas relevantes. As principais alterações realizadas nos dados foram:
