@@ -189,8 +189,11 @@ A imagem seguinte apresenta a otimização dos hiperparâmetros na árvore de de
 ![](./ADML43_DecisionTreeClassifier_.svg)
 
 Visando a melhor configuração do modelo, diferentes valores para os hiperparâmetros foram testados, sendo eles:
+
 `criterion`: Critério de divisão da árvore ('gini', 'entropy' ou 'log_loss'). Define como a árvore decide qual atributo usar para dividir os dados em cada nó.
+
 `min_samples_split`: Número mínimo de amostras necessárias para dividir um nó interno (2, 4, 8 ou 16). Controla o tamanho mínimo de um nó para que ele seja dividido em dois nós filhos.
+
 `min_samples_leaf`: Número mínimo de amostras em um nó folha (1, 2, 4, 8, 16, 32, 64 ou 128). Controla o tamanho mínimo de um nó para que ele seja considerado um nó folha.
 
 Parâmetros tunados:
