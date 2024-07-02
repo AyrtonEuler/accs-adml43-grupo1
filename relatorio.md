@@ -51,6 +51,8 @@ O resultado ficou da seguinte forma:
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/171699350/5ce4877c-8d3b-4734-8715-ec40b978bae0)
 
 #### Validação Árvore de Decisão
+Com os hiperparâmetros pré-definidos nesta etapa inicial da árvore de decisão e após o conjunto de dados pré-processado e dividido em conjuntos de treino e teste, criamos uma baseline inicial para comparação futura com os hiperparâmetros otimizados:
+
 ```python
 from sklearn.tree import DecisionTreeClassifier
 clf = DecisionTreeClassifier(
@@ -61,13 +63,19 @@ clf = DecisionTreeClassifier(
 )
 clf = clf.fit(X_train, y_train)
 ```
-Com os hiperparâmetros pré-definidos nesta etapa inicial da árvore de decisão e após o conjunto de dados pré-processado e dividido em conjuntos de treino e teste, criamos uma baseline inicial para comparação futura com os hiperparâmetros otimizados:
-
-![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/107217921/dbbab7fe-89b9-4205-86e9-cf501f8e756e)
 
 Após o treinamento, foram feitas as previsões no conjunto de teste e avaliada a performance através da acurácia e relatório de classificação:
 
-![Captura de tela 2024-06-18 112218](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/107217921/1010da9b-d669-458b-b7fb-01d53f4bc1f5)
+```python
+y_hat = clf.predict(X_test)
+
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+
+acuracia_baseline = accuracy_score(y_test, y_hat)
+print("Acurácia inicial: {}".format(round(acuracia_baseline*100,4)))
+print(classification_report(y_test, y_hat))
+```
 
 ![Captura de tela 2024-06-18 112315](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/107217921/1a5648a0-842f-40cb-9d8a-1f5f58a8300d)
 
