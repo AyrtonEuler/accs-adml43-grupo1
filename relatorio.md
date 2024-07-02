@@ -76,9 +76,19 @@ acuracia_baseline = accuracy_score(y_test, y_hat)
 print("Acurácia inicial: {}".format(round(acuracia_baseline*100,4)))
 print(classification_report(y_test, y_hat))
 ```
+Resultado:
 
-![Captura de tela 2024-06-18 112315](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/107217921/1a5648a0-842f-40cb-9d8a-1f5f58a8300d)
+```python
+Acurácia inicial: 89.9428
+              precision    recall  f1-score   support
 
+           0       0.92      0.92      0.92    131690
+           1       0.86      0.86      0.86     72980
+
+    accuracy                           0.90    204670
+   macro avg       0.89      0.89      0.89    204670
+weighted avg       0.90      0.90      0.90    204670
+```
 
 ### Deploy em um container e conexão com dados
 Ainda não fizemos por não ter feito todos os modelos. **Perguntar se é só jogar o ipynb numa imagem do Docker**
