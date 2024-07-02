@@ -29,6 +29,22 @@ Gráficos de histograma de cada campo da base de dados
 Matriz de correlação dos campos da base de dados
 ![](./correlation.svg)
 
+### Limpeza de Dados
+Utilizamos uma limpeza que considerou 3 fatores para remoção de atributos:
+
+
+•	Pelo menos duas categorias distintas de instâncias;
+
+•	Sem instâncias distintas em demasia, máximo 300 distintas;
+
+•	Sem muitas instâncias nulas (critério considerado se 99,99% for nulo).
+
+
+
+Depois foi feito uma segunda etapa de limpeza dos dados, considerando o balancemanto dos atributos.
+
+  
+
 Decidimos usar `CLASSI_FIN` como output para o nosso modelo
 ![image](https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/742079/032ade07-4142-4a20-892e-6ca58dba8601)
 Criamos um campo `DOENTE`. Se o campo `CLASSI_FIN` for algum destes números, seguindo o Dicionário de Dados do SINAN:
@@ -36,14 +52,13 @@ Criamos um campo `DOENTE`. Se o campo `CLASSI_FIN` for algum destes números, se
 10-Dengue
 11-Dengue comsinais de alarme
 12-Dengue grave
-13-Chikungunya
 ```
 O campo `DOENTE` será 1. Caso contrário, o campo `DOENTE` será 0.
 
 Usamos a técnica One Hot Encoding para converter dados categóricos em binários, com um campo para cada categoria. 
-Por exemplo, ao invez de um campo `CS_SEXO` que possa ser `[F, M ou I]`, criamos três campos `CS_SEXO_F`,`CS_SEXO_M` e `CS_SEXO_I` todos sendo `[1 ou 0]` de acordo com o campo `CS_SEXO`
+Por exemplo, ao invez de um campo `CS_SEXO` que possa ser `[F, M ou I]`, criamos três campos `CS_SEXO_F`,`CS_SEXO_M` e `CS_SEXO_I` todos sendo `[1 ou 0]` de acordo com o campo `CS_SEXO`.
 
-Removemos todas as linhas que tinham ou `CS_SEXO` ou `CLASSI_FIN` ausente. 
+Removemos todas as linhas que tinham ou `CS_SEXO` ou `CLASSI_FIN` ausentes.
 
 
 ### Divisão dos conjuntos de treino, teste e validação
