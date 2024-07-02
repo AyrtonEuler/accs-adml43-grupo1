@@ -185,7 +185,13 @@ hyperparameters = {
 ---
 
 #### Árvore de Decisão
+A imagem seguinte apresenta a otimização dos hiperparâmetros na árvore de decisão:
 ![](./ADML43_DecisionTreeClassifier_.svg)
+
+Visando a melhor configuração do modelo, diferentes valores para os hiperparâmetros foram testados, sendo eles:
+`criterion`: Critério de divisão da árvore ('gini', 'entropy' ou 'log_loss'). Define como a árvore decide qual atributo usar para dividir os dados em cada nó.
+`min_samples_split`: Número mínimo de amostras necessárias para dividir um nó interno (2, 4, 8 ou 16). Controla o tamanho mínimo de um nó para que ele seja dividido em dois nós filhos.
+`min_samples_leaf`: Número mínimo de amostras em um nó folha (1, 2, 4, 8, 16, 32, 64 ou 128). Controla o tamanho mínimo de um nó para que ele seja considerado um nó folha.
 
 Parâmetros tunados:
 ```python
@@ -196,11 +202,13 @@ hyperparameters = {
 }
 ```
 
-Melhores hiperparâmetros: 
+Melhores hiperparâmetros encontrados: 
 ```python
 {'criterion': 'gini', 'min_samples_leaf': 32, 'min_samples_split': 16}
 ```
 Melhor F1-score : 0.8865631871945879
+
+O relatório de classificação detalhado para o modelo otimizado é apresentado a seguir:
 
 |              | precision | recall | f1-score | support      |
 |--------------|-----------|--------|----------|--------------|
@@ -209,6 +217,8 @@ Melhor F1-score : 0.8865631871945879
 | accuracy     |           |        | 0.91     | 204670       |
 | macro avg    | 0.91      | 0.91   | 0.91     | 204670       |
 | weighted avg | 0.92      | 0.92   | 0.92     | 204670       |
+
+Analisando o relatório, é possível observar que o modelo apresenta uma acurácia de 91%, indicando um bom desempenho na classificação das amostras, além de alta precisão e recall na classe 0, mesmo que a classe 1 não tenha alcançada resultados tão elevados.
 
 ---
 
