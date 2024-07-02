@@ -1,4 +1,25 @@
-# Relatório
+
+  
+# <div align="center">Relatório</div>
+  
+<p align="center">
+<img src="https://github.com/matheuscardimdasilva/accs-adml43-grupo1/assets/107217921/7d918448-6620-4e02-8fd2-5e4c7f0ac479"width="100"/>
+</p>
+
+#### <div align="center">UNIVERSIDADE FEDERAL DA BAHIA</div>
+
+#### <div align="center">INSTITUTO DE COMPUTAÇÃO</div>
+
+#### <div align="center">ACCS ADML43 - OFICINA DE PROJETOS EM INTELIGÊNCIA ARTIFICIAL</div>
+
+#### <div align="center">DOCENTE: RICARDO COUTINHO MELLO</div>
+
+#### <div align="center">DISCENTES: AYRTON EULER, FELIPE FERRAZ, MARCOS NETTO, MATHEUS SILVA, MARINA FIGUEIREDO, PEDRO ARIEL E SINDY ALLANA ARAÚJO</div>
+
+
+---
+
+
 ## Primeira Semana - 04/06
 ### Estatística descritiva com distribuição dos dados, padrões e outliers
 Gráficos de histograma de cada campo da base de dados
